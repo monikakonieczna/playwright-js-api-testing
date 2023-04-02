@@ -1,0 +1,19 @@
+{
+  "name": "playwright-ts-api-testing",
+  "version": "1.0.0",
+  "description": "This repository will include practice project for api tests with the usage of Playwright & TS.",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/monikakonieczna/playwright-js-api-testing"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://github.com/monikakonieczna/playwright-js-api-testing#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.32.1",
+    "playwright": "^1.32.1"
+  }
+}
