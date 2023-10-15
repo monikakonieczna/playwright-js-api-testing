@@ -1,0 +1,112 @@
+{
+  "config": {
+    "configFile": "C:\\Users\\monika.konieczna\\Exploratory_Repos\\03_Playwright\\playwright-ts-api-testing\\playwright.config.ts",
+    "rootDir": "C:/Users/monika.konieczna/Exploratory_Repos/03_Playwright/playwright-ts-api-testing",
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "dot",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "test-result.json"
+        }
+      ],
+      [
+        "html",
+        {
+          "open": "always"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 15000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "C:/Users/monika.konieczna/Exploratory_Repos/03_Playwright/playwright-ts-api-testing/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "id": "",
+        "name": "",
+        "testDir": "C:/Users/monika.konieczna/Exploratory_Repos/03_Playwright/playwright-ts-api-testing",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "version": "1.39.0",
+    "workers": 4,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "apitest\\restful-booker.getBooking.test.ts",
+      "file": "apitest/restful-booker.getBooking.test.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Get BookingIds",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "status": "passed",
+                  "duration": 693,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "[\n  { bookingid: \u001b[33m1109\u001b[39m }, { bookingid: \u001b[33m1656\u001b[39m }, { bookingid: \u001b[33m1731\u001b[39m },\n  { bookingid: \u001b[33m35\u001b[39m },   { bookingid: \u001b[33m521\u001b[39m },  { bookingid: \u001b[33m111\u001b[39m },\n  { bookingid: \u001b[33m914\u001b[39m },  { bookingid: \u001b[33m2066\u001b[39m }, { bookingid: \u001b[33m427\u001b[39m },\n  { bookingid: \u001b[33m1130\u001b[39m }, { bookingid: \u001b[33m1972\u001b[39m }, { bookingid: \u001b[33m1315\u001b[39m },\n  { bookingid: \u001b[33m1443\u001b[39m }, { bookingid: \u001b[33m1273\u001b[39m }, { bookingid: \u001b[33m331\u001b[39m },\n  { bookingid: \u001b[33m129\u001b[39m },  { bookingid: \u001b[33m1435\u001b[39m }, { bookingid: \u001b[33m972\u001b[39m },\n  { bookingid: \u001b[33m126\u001b[39m },  { bookingid: \u001b[33m1203\u001b[39m }, { bookingid: \u001b[33m863\u001b[39m },\n  { bookingid: \u001b[33m1893\u001b[39m }, { bookingid: \u001b[33m1429\u001b[39m }, { bookingid: \u001b[33m1284\u001b[39m },\n  { bookingid: \u001b[33m1281\u001b[39m }, { bookingid: \u001b[33m636\u001b[39m },  { bookingid: \u001b[33m1717\u001b[39m },\n  { bookingid: \u001b[33m1466\u001b[39m }, { bookingid: \u001b[33m1356\u001b[39m }, { bookingid: \u001b[33m1701\u001b[39m },\n  { bookingid: \u001b[33m187\u001b[39m },  { bookingid: \u001b[33m181\u001b[39m },  { bookingid: \u001b[33m847\u001b[39m },\n  { bookingid: \u001b[33m840\u001b[39m },  { bookingid: \u001b[33m1636\u001b[39m }, { bookingid: \u001b[33m52\u001b[39m },\n  { bookingid: \u001b[33m481\u001b[39m },  { bookingid: \u001b[33m408\u001b[39m },  { bookingid: \u001b[33m283\u001b[39m },\n  { bookingid: \u001b[33m1638\u001b[39m }, { bookingid: \u001b[33m1742\u001b[39m }, { bookingid: \u001b[33m2090\u001b[39m },\n  { bookingid: \u001b[33m975\u001b[39m },  { bookingid: \u001b[33m879\u001b[39m },  { bookingid: \u001b[33m522\u001b[39m },\n  { bookingid: \u001b[33m330\u001b[39m },  { bookingid: \u001b[33m1624\u001b[39m }, { bookingid: \u001b[33m1907\u001b[39m },\n  { bookingid: \u001b[33m359\u001b[39m },  { bookingid: \u001b[33m629\u001b[39m },  { bookingid: \u001b[33m823\u001b[39m },\n  { bookingid: \u001b[33m322\u001b[39m },  { bookingid: \u001b[33m2097\u001b[39m }, { bookingid: \u001b[33m1384\u001b[39m },\n  { bookingid: \u001b[33m688\u001b[39m },  { bookingid: \u001b[33m2073\u001b[39m }, { bookingid: \u001b[33m601\u001b[39m },\n  { bookingid: \u001b[33m251\u001b[39m },  { bookingid: \u001b[33m623\u001b[39m },  { bookingid: \u001b[33m2068\u001b[39m },\n  { bookingid: \u001b[33m1808\u001b[39m }, { bookingid: \u001b[33m926\u001b[39m },  { bookingid: \u001b[33m1639\u001b[39m },\n  { bookingid: \u001b[33m424\u001b[39m },  { bookingid: \u001b[33m1735\u001b[39m }, { bookingid: \u001b[33m1877\u001b[39m },\n  { bookingid: \u001b[33m2030\u001b[39m }, { bookingid: \u001b[33m292\u001b[39m },  { bookingid: \u001b[33m1937\u001b[39m },\n  { bookingid: \u001b[33m310\u001b[39m },  { bookingid: \u001b[33m1234\u001b[39m }, { bookingid: \u001b[33m197\u001b[39m },\n  { bookingid: \u001b[33m150\u001b[39m },  { bookingid: \u001b[33m1870\u001b[39m }, { bookingid: \u001b[33m772\u001b[39m },\n  { bookingid: \u001b[33m1590\u001b[39m }, { bookingid: \u001b[33m2051\u001b[39m }, { bookingid: \u001b[33m115\u001b[39m },\n  { bookingid: \u001b[33m944\u001b[39m },  { bookingid: \u001b[33m1403\u001b[39m }, { bookingid: \u001b[33m703\u001b[39m },\n  { bookingid: \u001b[33m1430\u001b[39m }, { bookingid: \u001b[33m572\u001b[39m },  { bookingid: \u001b[33m1697\u001b[39m },\n  { bookingid: \u001b[33m655\u001b[39m },  { bookingid: \u001b[33m996\u001b[39m },  { bookingid: \u001b[33m5\u001b[39m },\n  { bookingid: \u001b[33m4\u001b[39m },    { bookingid: \u001b[33m1546\u001b[39m }, { bookingid: \u001b[33m590\u001b[39m },\n  { bookingid: \u001b[33m357\u001b[39m },  { bookingid: \u001b[33m51\u001b[39m },   { bookingid: \u001b[33m1694\u001b[39m },\n  { bookingid: \u001b[33m1986\u001b[39m }, { bookingid: \u001b[33m249\u001b[39m },  { bookingid: \u001b[33m705\u001b[39m },\n  { bookingid: \u001b[33m1676\u001b[39m }, { bookingid: \u001b[33m649\u001b[39m },  { bookingid: \u001b[33m1365\u001b[39m },\n  { bookingid: \u001b[33m1516\u001b[39m },\n  ... 1354 more items\n]\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2023-10-15T14:12:17.636Z",
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "038276c73fc1855a7497-a575af41000d800b309d",
+          "file": "apitest/restful-booker.getBooking.test.ts",
+          "line": 3,
+          "column": 6
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2023-10-15T14:12:17.129Z",
+    "duration": 1217.576
+  }
+}

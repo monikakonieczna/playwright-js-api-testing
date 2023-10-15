@@ -1,10 +1,21 @@
 {
-    "compilerOptions": {
+  "compilerOptions": {
       "target": "es6",
-      "lib": ["dom", "dom.iterable", "esnext"],
       "strict": true,
       "module": "commonjs",
-      "noEmit": true
-    },
-    "include": ["tests"]
+      "sourceMap": true,
+      "resolveJsonModule": true,
+      "baseUrl": ".",
+      "paths": {
+          "@pages/*": [
+              "pom/letcodemodules/credentials/*"
+          ],
+          "@fixtures/*": [
+              "fixtures/*"
+          ],
+          "@files/*": [
+              "uploadFolder/*"
+          ]
+      }
+  }
 }

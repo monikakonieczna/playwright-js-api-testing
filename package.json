@@ -3,7 +3,11 @@
   "version": "1.0.0",
   "description": "This repository will include practice project for api tests with the usage of Playwright & TS.",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "report": "npx playwright test --reporter=html && npx playwright show-report",
+    "debug": "npx playwright test --debug",
+    "test": "npx playwright test"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/monikakonieczna/playwright-js-api-testing"
@@ -13,7 +17,7 @@
   "license": "ISC",
   "homepage": "https://github.com/monikakonieczna/playwright-js-api-testing#readme",
   "devDependencies": {
-    "@playwright/test": "^1.32.1",
+    "@playwright/test": "^1.39.0",
     "playwright": "^1.32.1"
   }
 }
