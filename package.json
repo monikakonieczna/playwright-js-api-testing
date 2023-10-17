@@ -18,6 +18,10 @@
   "homepage": "https://github.com/monikakonieczna/playwright-js-api-testing#readme",
   "devDependencies": {
     "@playwright/test": "^1.39.0",
+    "@types/node": "^20.8.6",
     "playwright": "^1.32.1"
+  },
+  "dependencies": {
+    "dotenv": "^16.3.1"
   }
 }

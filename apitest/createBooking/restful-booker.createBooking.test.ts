@@ -18,8 +18,3 @@ test("Create Booking", async ({ request, baseURL }) => {
     expect(_response.status()).toBe(200);
     expect(_response.ok()).toBeTruthy();
 })
-//Get
-
-//Update
-
-//Delete 

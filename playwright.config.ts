@@ -1,4 +1,5 @@
 import { devices, PlaywrightTestConfig } from "@playwright/test";
+require('dotenv').config({ path: `.env.${process.env.ENVIRONMENT}` });
 
 
 const config: PlaywrightTestConfig = {
@@ -37,5 +38,6 @@ const config: PlaywrightTestConfig = {
             open: "always"
         }]
     ],
+    globalSetup: require.resolve('./global-setup')
 }
 export default config;

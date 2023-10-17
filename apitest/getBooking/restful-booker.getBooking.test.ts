@@ -36,7 +36,7 @@ test("Get Booking By Checkin Date", async ({ request, baseURL }) => {
     expect(_response.ok()).toBeTruthy();
 });
 
-test.only("Get Booking By Checkout Date", async ({ request, baseURL }) => {
+test("Get Booking By Checkout Date", async ({ request, baseURL }) => {
     const _response = await request.get(`${baseURL}/booking`, {
         params: {
             checkout: "2014-05-21"
@@ -46,7 +46,7 @@ test.only("Get Booking By Checkout Date", async ({ request, baseURL }) => {
     expect(_response.ok()).toBeTruthy();
 });
 
-test.only("Get Booking By ID", async ({ request, baseURL }) => {
+test("Get Booking By ID", async ({ request, baseURL }) => {
     const _response = await request.get(`${baseURL}/booking`, {
         params: {
             checkout: "2014-05-21"

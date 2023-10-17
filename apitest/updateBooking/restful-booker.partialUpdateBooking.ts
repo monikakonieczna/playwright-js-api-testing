@@ -1,7 +1,12 @@
 import { expect, test } from "playwright/test";
 
-test("Update Booking", async ({ request, baseURL }) => {
+test.only("Update Booking", async ({ request, baseURL }) => {
+    console.log(`${process.env.TOKEN}`);
     const _response = await request.patch(`${baseURL}/booking`, {
+        headers: {
+        'Authorization': `Bearer ${process.env.TOKEN}`,
+        'Content-Type': 'application/json'
+        },
         data: {
             "firstname": "Sally",
             "lastname": "Brown",
