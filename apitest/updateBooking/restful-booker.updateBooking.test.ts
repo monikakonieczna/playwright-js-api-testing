@@ -1,7 +1,12 @@
 import { expect, test } from "playwright/test";
 
 test("Update Booking", async ({ request, baseURL }) => {
-    const _response = await request.put(`${baseURL}/booking`, {
+    const _response = await request.put(`${baseURL}/booking/1`, {
+        headers: {
+            'Cookie': `token=${process.env.TOKEN}`,
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+            },
         data: {
             "firstname": "Sally",
             "lastname": "Brown",

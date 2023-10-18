@@ -17,8 +17,8 @@ This tests are purely for Playwright features practice.
 
 
 ## Getting Started
-
 ### Prerequisites
+You need to have Node.js installed on your machine.
 
 ## Useful Commands
 

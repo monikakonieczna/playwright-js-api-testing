@@ -1,5 +1,5 @@
 import { devices, PlaywrightTestConfig } from "@playwright/test";
-require('dotenv').config({ path: `.env.${process.env.ENVIRONMENT}` });
+require('dotenv').config({path: '.env'});
 
 
 const config: PlaywrightTestConfig = {

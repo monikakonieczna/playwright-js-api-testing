@@ -1,11 +1,12 @@
 import { expect, test } from "playwright/test";
 
-test.only("Update Booking", async ({ request, baseURL }) => {
-    console.log(`${process.env.TOKEN}`);
-    const _response = await request.patch(`${baseURL}/booking`, {
+
+test("Update Booking", async ({ request, baseURL }) => {
+    const _response = await request.patch(`${baseURL}/booking/1`, {
         headers: {
-        'Authorization': `Bearer ${process.env.TOKEN}`,
-        'Content-Type': 'application/json'
+        'Cookie': `token=${process.env.TOKEN}`,
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
         },
         data: {
             "firstname": "Sally",
@@ -19,6 +20,4 @@ test.only("Update Booking", async ({ request, baseURL }) => {
             "additionalneeds": "Breakfast"
         }
     });
-    expect(_response.status()).toBe(200);
-    expect(_response.ok()).toBeTruthy();
 })

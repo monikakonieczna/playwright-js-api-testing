@@ -80,12 +80,12 @@
                 {
                   "workerIndex": 0,
                   "status": "passed",
-                  "duration": 599,
+                  "duration": 586,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2023-10-17T14:54:36.392Z",
+                  "startTime": "2023-10-18T07:14:25.027Z",
                   "attachments": []
                 }
               ],
@@ -120,12 +120,12 @@
                 {
                   "workerIndex": 1,
                   "status": "passed",
-                  "duration": 594,
+                  "duration": 583,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2023-10-17T14:54:36.392Z",
+                  "startTime": "2023-10-18T07:14:25.025Z",
                   "attachments": []
                 }
               ],
@@ -160,12 +160,12 @@
                 {
                   "workerIndex": 2,
                   "status": "passed",
-                  "duration": 705,
+                  "duration": 557,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2023-10-17T14:54:36.410Z",
+                  "startTime": "2023-10-18T07:14:25.125Z",
                   "attachments": []
                 }
               ],
@@ -192,12 +192,12 @@
                 {
                   "workerIndex": 2,
                   "status": "passed",
-                  "duration": 531,
+                  "duration": 489,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2023-10-17T14:54:37.117Z",
+                  "startTime": "2023-10-18T07:14:25.685Z",
                   "attachments": []
                 }
               ],
@@ -224,12 +224,12 @@
                 {
                   "workerIndex": 2,
                   "status": "passed",
-                  "duration": 508,
+                  "duration": 502,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2023-10-17T14:54:37.650Z",
+                  "startTime": "2023-10-18T07:14:26.175Z",
                   "attachments": []
                 }
               ],
@@ -256,12 +256,12 @@
                 {
                   "workerIndex": 2,
                   "status": "passed",
-                  "duration": 618,
+                  "duration": 494,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2023-10-17T14:54:38.160Z",
+                  "startTime": "2023-10-18T07:14:26.679Z",
                   "attachments": []
                 }
               ],
@@ -288,12 +288,12 @@
                 {
                   "workerIndex": 2,
                   "status": "passed",
-                  "duration": 520,
+                  "duration": 488,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2023-10-17T14:54:38.780Z",
+                  "startTime": "2023-10-18T07:14:27.175Z",
                   "attachments": []
                 }
               ],
@@ -325,7 +325,7 @@
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2023-10-17T14:54:39.302Z",
+                  "startTime": "2023-10-18T07:14:27.664Z",
                   "attachments": []
                 }
               ],
@@ -347,7 +347,7 @@
       "specs": [
         {
           "title": "Update Booking",
-          "ok": false,
+          "ok": true,
           "tags": [],
           "tests": [
             {
@@ -359,41 +359,17 @@
               "results": [
                 {
                   "workerIndex": 3,
-                  "status": "failed",
-                  "duration": 580,
-                  "error": {
-                    "message": "\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m200\u001b[39m\nReceived: \u001b[31m404\u001b[39m",
-                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m200\u001b[39m\nReceived: \u001b[31m404\u001b[39m\n    at C:\\Users\\monika.konieczna\\Exploratory_Repos\\03_Playwright\\playwright-ts-api-testing\\apitest\\updateBooking\\restful-booker.updateBooking.test.ts:17:32",
-                    "location": {
-                      "file": "C:\\Users\\monika.konieczna\\Exploratory_Repos\\03_Playwright\\playwright-ts-api-testing\\apitest\\updateBooking\\restful-booker.updateBooking.test.ts",
-                      "column": 32,
-                      "line": 17
-                    },
-                    "snippet": "\u001b[0m \u001b[90m 15 |\u001b[39m         }\u001b[0m\n\u001b[0m \u001b[90m 16 |\u001b[39m     })\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 17 |\u001b[39m     expect(_response\u001b[33m.\u001b[39mstatus())\u001b[33m.\u001b[39mtoBe(\u001b[35m200\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m                                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 18 |\u001b[39m     expect(_response\u001b[33m.\u001b[39mok())\u001b[33m.\u001b[39mtoBeTruthy()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 19 |\u001b[39m })\u001b[0m\n\u001b[0m \u001b[90m 20 |\u001b[39m\u001b[0m"
-                  },
-                  "errors": [
-                    {
-                      "location": {
-                        "file": "C:\\Users\\monika.konieczna\\Exploratory_Repos\\03_Playwright\\playwright-ts-api-testing\\apitest\\updateBooking\\restful-booker.updateBooking.test.ts",
-                        "column": 32,
-                        "line": 17
-                      },
-                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m200\u001b[39m\nReceived: \u001b[31m404\u001b[39m\n\n\u001b[0m \u001b[90m 15 |\u001b[39m         }\u001b[0m\n\u001b[0m \u001b[90m 16 |\u001b[39m     })\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 17 |\u001b[39m     expect(_response\u001b[33m.\u001b[39mstatus())\u001b[33m.\u001b[39mtoBe(\u001b[35m200\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m                                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 18 |\u001b[39m     expect(_response\u001b[33m.\u001b[39mok())\u001b[33m.\u001b[39mtoBeTruthy()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 19 |\u001b[39m })\u001b[0m\n\u001b[0m \u001b[90m 20 |\u001b[39m\u001b[0m\n\n\u001b[2m    at C:\\Users\\monika.konieczna\\Exploratory_Repos\\03_Playwright\\playwright-ts-api-testing\\apitest\\updateBooking\\restful-booker.updateBooking.test.ts:17:32\u001b[22m"
-                    }
-                  ],
+                  "status": "passed",
+                  "duration": 600,
+                  "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2023-10-17T14:54:36.436Z",
-                  "attachments": [],
-                  "errorLocation": {
-                    "file": "C:\\Users\\monika.konieczna\\Exploratory_Repos\\03_Playwright\\playwright-ts-api-testing\\apitest\\updateBooking\\restful-booker.updateBooking.test.ts",
-                    "column": 32,
-                    "line": 17
-                  }
+                  "startTime": "2023-10-18T07:14:25.022Z",
+                  "attachments": []
                 }
               ],
-              "status": "unexpected"
+              "status": "expected"
             }
           ],
           "id": "03dbe4d146e0f4491156-f057111da93d56bbf7da",
@@ -406,7 +382,7 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2023-10-17T14:54:35.089Z",
-    "duration": 4764.758
+    "startTime": "2023-10-18T07:14:23.779Z",
+    "duration": 4432.236
   }
 }
