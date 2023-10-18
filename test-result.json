@@ -11,7 +11,7 @@
     "grepInvert": null,
     "maxFailures": 0,
     "metadata": {
-      "actualWorkers": 4
+      "actualWorkers": 1
     },
     "preserveOutput": "always",
     "reporter": [
@@ -60,15 +60,17 @@
   },
   "suites": [
     {
-      "title": "apitest\\createBooking\\restful-booker.createBooking.test.ts",
-      "file": "apitest/createBooking/restful-booker.createBooking.test.ts",
+      "title": "apitest\\getBooking\\restful-booker.getBooking.test.ts",
+      "file": "apitest/getBooking/restful-booker.getBooking.test.ts",
       "column": 0,
       "line": 0,
       "specs": [
         {
-          "title": "Create Booking",
-          "ok": true,
-          "tags": [],
+          "title": "Get Booking By Lastname @get",
+          "ok": false,
+          "tags": [
+            "get"
+          ],
           "tests": [
             {
               "timeout": 30000,
@@ -79,36 +81,58 @@
               "results": [
                 {
                   "workerIndex": 0,
-                  "status": "passed",
-                  "duration": 586,
-                  "errors": [],
-                  "stdout": [],
+                  "status": "failed",
+                  "duration": 503,
+                  "error": {
+                    "message": "\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoHaveProperty\u001b[2m(\u001b[22m\u001b[32mpath\u001b[39m\u001b[2m, \u001b[22m\u001b[32mvalue\u001b[39m\u001b[2m)\u001b[22m\n\n\u001b[1mMatcher error\u001b[22m: \u001b[31mreceived\u001b[39m value must not be null nor undefined\n\nReceived has value: \u001b[31mundefined\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoHaveProperty\u001b[2m(\u001b[22m\u001b[32mpath\u001b[39m\u001b[2m, \u001b[22m\u001b[32mvalue\u001b[39m\u001b[2m)\u001b[22m\n\n\u001b[1mMatcher error\u001b[22m: \u001b[31mreceived\u001b[39m value must not be null nor undefined\n\nReceived has value: \u001b[31mundefined\u001b[39m\n    at C:\\Users\\monika.konieczna\\Exploratory_Repos\\03_Playwright\\playwright-ts-api-testing\\apitest\\getBooking\\restful-booker.getBooking.test.ts:36:34",
+                    "location": {
+                      "file": "C:\\Users\\monika.konieczna\\Exploratory_Repos\\03_Playwright\\playwright-ts-api-testing\\apitest\\getBooking\\restful-booker.getBooking.test.ts",
+                      "column": 34,
+                      "line": 36
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 34 |\u001b[39m     expect(response\u001b[33m.\u001b[39mstatus())\u001b[33m.\u001b[39mtoBe(\u001b[35m200\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 35 |\u001b[39m     expect(response\u001b[33m.\u001b[39mok())\u001b[33m.\u001b[39mtoBeTruthy()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 36 |\u001b[39m     expect(responseBody\u001b[33m.\u001b[39mbooking)\u001b[33m.\u001b[39mtoHaveProperty(\u001b[32m\"firstname\"\u001b[39m\u001b[33m,\u001b[39m bookingData\u001b[33m.\u001b[39mfirstname)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m                                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 37 |\u001b[39m     expect(responseBody\u001b[33m.\u001b[39mbooking)\u001b[33m.\u001b[39mtoHaveProperty(\u001b[32m\"lastname\"\u001b[39m\u001b[33m,\u001b[39m bookingData\u001b[33m.\u001b[39mlastname)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 38 |\u001b[39m     expect(responseBody\u001b[33m.\u001b[39mbooking)\u001b[33m.\u001b[39mtoHaveProperty(\u001b[32m\"totalprice\"\u001b[39m\u001b[33m,\u001b[39m bookingData\u001b[33m.\u001b[39mtotalprice)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 39 |\u001b[39m     expect(responseBody\u001b[33m.\u001b[39mbooking)\u001b[33m.\u001b[39mtoHaveProperty(\u001b[32m\"depositpaid\"\u001b[39m\u001b[33m,\u001b[39m bookingData\u001b[33m.\u001b[39mdepositpaid)\u001b[33m;\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\monika.konieczna\\Exploratory_Repos\\03_Playwright\\playwright-ts-api-testing\\apitest\\getBooking\\restful-booker.getBooking.test.ts",
+                        "column": 34,
+                        "line": 36
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoHaveProperty\u001b[2m(\u001b[22m\u001b[32mpath\u001b[39m\u001b[2m, \u001b[22m\u001b[32mvalue\u001b[39m\u001b[2m)\u001b[22m\n\n\u001b[1mMatcher error\u001b[22m: \u001b[31mreceived\u001b[39m value must not be null nor undefined\n\nReceived has value: \u001b[31mundefined\u001b[39m\n\n\u001b[0m \u001b[90m 34 |\u001b[39m     expect(response\u001b[33m.\u001b[39mstatus())\u001b[33m.\u001b[39mtoBe(\u001b[35m200\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 35 |\u001b[39m     expect(response\u001b[33m.\u001b[39mok())\u001b[33m.\u001b[39mtoBeTruthy()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 36 |\u001b[39m     expect(responseBody\u001b[33m.\u001b[39mbooking)\u001b[33m.\u001b[39mtoHaveProperty(\u001b[32m\"firstname\"\u001b[39m\u001b[33m,\u001b[39m bookingData\u001b[33m.\u001b[39mfirstname)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m                                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 37 |\u001b[39m     expect(responseBody\u001b[33m.\u001b[39mbooking)\u001b[33m.\u001b[39mtoHaveProperty(\u001b[32m\"lastname\"\u001b[39m\u001b[33m,\u001b[39m bookingData\u001b[33m.\u001b[39mlastname)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 38 |\u001b[39m     expect(responseBody\u001b[33m.\u001b[39mbooking)\u001b[33m.\u001b[39mtoHaveProperty(\u001b[32m\"totalprice\"\u001b[39m\u001b[33m,\u001b[39m bookingData\u001b[33m.\u001b[39mtotalprice)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 39 |\u001b[39m     expect(responseBody\u001b[33m.\u001b[39mbooking)\u001b[33m.\u001b[39mtoHaveProperty(\u001b[32m\"depositpaid\"\u001b[39m\u001b[33m,\u001b[39m bookingData\u001b[33m.\u001b[39mdepositpaid)\u001b[33m;\u001b[39m\u001b[0m\n\n\u001b[2m    at C:\\Users\\monika.konieczna\\Exploratory_Repos\\03_Playwright\\playwright-ts-api-testing\\apitest\\getBooking\\restful-booker.getBooking.test.ts:36:34\u001b[22m"
+                    }
+                  ],
+                  "stdout": [
+                    {
+                      "text": "676\n"
+                    }
+                  ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2023-10-18T07:14:25.027Z",
-                  "attachments": []
+                  "startTime": "2023-10-18T17:10:15.782Z",
+                  "attachments": [],
+                  "errorLocation": {
+                    "file": "C:\\Users\\monika.konieczna\\Exploratory_Repos\\03_Playwright\\playwright-ts-api-testing\\apitest\\getBooking\\restful-booker.getBooking.test.ts",
+                    "column": 34,
+                    "line": 36
+                  }
                 }
               ],
-              "status": "expected"
+              "status": "unexpected"
             }
           ],
-          "id": "3770cac8e7c4e09a5bd2-b732e6877ed81bc7c749",
-          "file": "apitest/createBooking/restful-booker.createBooking.test.ts",
-          "line": 4,
+          "id": "c420f95386d17f6059ad-a76766fc3b589425be30",
+          "file": "apitest/getBooking/restful-booker.getBooking.test.ts",
+          "line": 26,
           "column": 5
-        }
-      ]
-    },
-    {
-      "title": "apitest\\deleteBooking\\restful-booker.deleteBooking.test.ts",
-      "file": "apitest/deleteBooking/restful-booker.deleteBooking.test.ts",
-      "column": 0,
-      "line": 0,
-      "specs": [
+        },
         {
-          "title": "Get Booking",
-          "ok": true,
-          "tags": [],
+          "title": "Get Booking By Firstname @get",
+          "ok": false,
+          "tags": [
+            "get"
+          ],
           "tests": [
             {
               "timeout": 30000,
@@ -119,68 +143,58 @@
               "results": [
                 {
                   "workerIndex": 1,
-                  "status": "passed",
-                  "duration": 583,
-                  "errors": [],
-                  "stdout": [],
+                  "status": "failed",
+                  "duration": 500,
+                  "error": {
+                    "message": "\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoHaveProperty\u001b[2m(\u001b[22m\u001b[32mpath\u001b[39m\u001b[2m, \u001b[22m\u001b[32mvalue\u001b[39m\u001b[2m)\u001b[22m\n\n\u001b[1mMatcher error\u001b[22m: \u001b[31mreceived\u001b[39m value must not be null nor undefined\n\nReceived has value: \u001b[31mundefined\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoHaveProperty\u001b[2m(\u001b[22m\u001b[32mpath\u001b[39m\u001b[2m, \u001b[22m\u001b[32mvalue\u001b[39m\u001b[2m)\u001b[22m\n\n\u001b[1mMatcher error\u001b[22m: \u001b[31mreceived\u001b[39m value must not be null nor undefined\n\nReceived has value: \u001b[31mundefined\u001b[39m\n    at C:\\Users\\monika.konieczna\\Exploratory_Repos\\03_Playwright\\playwright-ts-api-testing\\apitest\\getBooking\\restful-booker.getBooking.test.ts:53:34",
+                    "location": {
+                      "file": "C:\\Users\\monika.konieczna\\Exploratory_Repos\\03_Playwright\\playwright-ts-api-testing\\apitest\\getBooking\\restful-booker.getBooking.test.ts",
+                      "column": 34,
+                      "line": 53
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 51 |\u001b[39m     expect(response\u001b[33m.\u001b[39mok())\u001b[33m.\u001b[39mtoBeTruthy()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 52 |\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 53 |\u001b[39m     expect(responseBody\u001b[33m.\u001b[39mbooking)\u001b[33m.\u001b[39mtoHaveProperty(\u001b[32m\"firstname\"\u001b[39m\u001b[33m,\u001b[39m bookingData\u001b[33m.\u001b[39mfirstname)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m                                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 54 |\u001b[39m     expect(responseBody\u001b[33m.\u001b[39mbooking)\u001b[33m.\u001b[39mtoHaveProperty(\u001b[32m\"lastname\"\u001b[39m\u001b[33m,\u001b[39m bookingData\u001b[33m.\u001b[39mlastname)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 55 |\u001b[39m     expect(responseBody\u001b[33m.\u001b[39mbooking)\u001b[33m.\u001b[39mtoHaveProperty(\u001b[32m\"totalprice\"\u001b[39m\u001b[33m,\u001b[39m bookingData\u001b[33m.\u001b[39mtotalprice)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 56 |\u001b[39m     expect(responseBody\u001b[33m.\u001b[39mbooking)\u001b[33m.\u001b[39mtoHaveProperty(\u001b[32m\"depositpaid\"\u001b[39m\u001b[33m,\u001b[39m bookingData\u001b[33m.\u001b[39mdepositpaid)\u001b[33m;\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\monika.konieczna\\Exploratory_Repos\\03_Playwright\\playwright-ts-api-testing\\apitest\\getBooking\\restful-booker.getBooking.test.ts",
+                        "column": 34,
+                        "line": 53
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoHaveProperty\u001b[2m(\u001b[22m\u001b[32mpath\u001b[39m\u001b[2m, \u001b[22m\u001b[32mvalue\u001b[39m\u001b[2m)\u001b[22m\n\n\u001b[1mMatcher error\u001b[22m: \u001b[31mreceived\u001b[39m value must not be null nor undefined\n\nReceived has value: \u001b[31mundefined\u001b[39m\n\n\u001b[0m \u001b[90m 51 |\u001b[39m     expect(response\u001b[33m.\u001b[39mok())\u001b[33m.\u001b[39mtoBeTruthy()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 52 |\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 53 |\u001b[39m     expect(responseBody\u001b[33m.\u001b[39mbooking)\u001b[33m.\u001b[39mtoHaveProperty(\u001b[32m\"firstname\"\u001b[39m\u001b[33m,\u001b[39m bookingData\u001b[33m.\u001b[39mfirstname)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m                                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 54 |\u001b[39m     expect(responseBody\u001b[33m.\u001b[39mbooking)\u001b[33m.\u001b[39mtoHaveProperty(\u001b[32m\"lastname\"\u001b[39m\u001b[33m,\u001b[39m bookingData\u001b[33m.\u001b[39mlastname)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 55 |\u001b[39m     expect(responseBody\u001b[33m.\u001b[39mbooking)\u001b[33m.\u001b[39mtoHaveProperty(\u001b[32m\"totalprice\"\u001b[39m\u001b[33m,\u001b[39m bookingData\u001b[33m.\u001b[39mtotalprice)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 56 |\u001b[39m     expect(responseBody\u001b[33m.\u001b[39mbooking)\u001b[33m.\u001b[39mtoHaveProperty(\u001b[32m\"depositpaid\"\u001b[39m\u001b[33m,\u001b[39m bookingData\u001b[33m.\u001b[39mdepositpaid)\u001b[33m;\u001b[39m\u001b[0m\n\n\u001b[2m    at C:\\Users\\monika.konieczna\\Exploratory_Repos\\03_Playwright\\playwright-ts-api-testing\\apitest\\getBooking\\restful-booker.getBooking.test.ts:53:34\u001b[22m"
+                    }
+                  ],
+                  "stdout": [
+                    {
+                      "text": "689\n"
+                    }
+                  ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2023-10-18T07:14:25.025Z",
-                  "attachments": []
+                  "startTime": "2023-10-18T17:10:17.287Z",
+                  "attachments": [],
+                  "errorLocation": {
+                    "file": "C:\\Users\\monika.konieczna\\Exploratory_Repos\\03_Playwright\\playwright-ts-api-testing\\apitest\\getBooking\\restful-booker.getBooking.test.ts",
+                    "column": 34,
+                    "line": 53
+                  }
                 }
               ],
-              "status": "expected"
+              "status": "unexpected"
             }
           ],
-          "id": "743742a913ab42b99cec-c07cf2188327d0bcf505",
-          "file": "apitest/deleteBooking/restful-booker.deleteBooking.test.ts",
-          "line": 3,
-          "column": 5
-        }
-      ]
-    },
-    {
-      "title": "apitest\\getBooking\\restful-booker.getBooking.test.ts",
-      "file": "apitest/getBooking/restful-booker.getBooking.test.ts",
-      "column": 0,
-      "line": 0,
-      "specs": [
-        {
-          "title": "Get BookingIds",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "",
-              "projectName": "",
-              "results": [
-                {
-                  "workerIndex": 2,
-                  "status": "passed",
-                  "duration": 557,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2023-10-18T07:14:25.125Z",
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "c420f95386d17f6059ad-4b3225dc08c6c9e6b538",
+          "id": "c420f95386d17f6059ad-c9ec2ee70f05cf024e18",
           "file": "apitest/getBooking/restful-booker.getBooking.test.ts",
-          "line": 3,
+          "line": 42,
           "column": 5
         },
         {
-          "title": "Get Booking By Lastname",
-          "ok": true,
-          "tags": [],
+          "title": "Get Booking By Checkin Date @get",
+          "ok": false,
+          "tags": [
+            "get"
+          ],
           "tests": [
             {
               "timeout": 30000,
@@ -191,164 +205,58 @@
               "results": [
                 {
                   "workerIndex": 2,
-                  "status": "passed",
-                  "duration": 489,
-                  "errors": [],
-                  "stdout": [],
+                  "status": "failed",
+                  "duration": 501,
+                  "error": {
+                    "message": "\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoHaveProperty\u001b[2m(\u001b[22m\u001b[32mpath\u001b[39m\u001b[2m, \u001b[22m\u001b[32mvalue\u001b[39m\u001b[2m)\u001b[22m\n\n\u001b[1mMatcher error\u001b[22m: \u001b[31mreceived\u001b[39m value must not be null nor undefined\n\nReceived has value: \u001b[31mundefined\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoHaveProperty\u001b[2m(\u001b[22m\u001b[32mpath\u001b[39m\u001b[2m, \u001b[22m\u001b[32mvalue\u001b[39m\u001b[2m)\u001b[22m\n\n\u001b[1mMatcher error\u001b[22m: \u001b[31mreceived\u001b[39m value must not be null nor undefined\n\nReceived has value: \u001b[31mundefined\u001b[39m\n    at C:\\Users\\monika.konieczna\\Exploratory_Repos\\03_Playwright\\playwright-ts-api-testing\\apitest\\getBooking\\restful-booker.getBooking.test.ts:70:34",
+                    "location": {
+                      "file": "C:\\Users\\monika.konieczna\\Exploratory_Repos\\03_Playwright\\playwright-ts-api-testing\\apitest\\getBooking\\restful-booker.getBooking.test.ts",
+                      "column": 34,
+                      "line": 70
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 68 |\u001b[39m     expect(response\u001b[33m.\u001b[39mok())\u001b[33m.\u001b[39mtoBeTruthy()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 69 |\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 70 |\u001b[39m     expect(responseBody\u001b[33m.\u001b[39mbooking)\u001b[33m.\u001b[39mtoHaveProperty(\u001b[32m\"firstname\"\u001b[39m\u001b[33m,\u001b[39m bookingData\u001b[33m.\u001b[39mfirstname)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m                                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 71 |\u001b[39m     expect(responseBody\u001b[33m.\u001b[39mbooking)\u001b[33m.\u001b[39mtoHaveProperty(\u001b[32m\"lastname\"\u001b[39m\u001b[33m,\u001b[39m bookingData\u001b[33m.\u001b[39mlastname)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 72 |\u001b[39m     expect(responseBody\u001b[33m.\u001b[39mbooking)\u001b[33m.\u001b[39mtoHaveProperty(\u001b[32m\"totalprice\"\u001b[39m\u001b[33m,\u001b[39m bookingData\u001b[33m.\u001b[39mtotalprice)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 73 |\u001b[39m     expect(responseBody\u001b[33m.\u001b[39mbooking)\u001b[33m.\u001b[39mtoHaveProperty(\u001b[32m\"depositpaid\"\u001b[39m\u001b[33m,\u001b[39m bookingData\u001b[33m.\u001b[39mdepositpaid)\u001b[33m;\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\monika.konieczna\\Exploratory_Repos\\03_Playwright\\playwright-ts-api-testing\\apitest\\getBooking\\restful-booker.getBooking.test.ts",
+                        "column": 34,
+                        "line": 70
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoHaveProperty\u001b[2m(\u001b[22m\u001b[32mpath\u001b[39m\u001b[2m, \u001b[22m\u001b[32mvalue\u001b[39m\u001b[2m)\u001b[22m\n\n\u001b[1mMatcher error\u001b[22m: \u001b[31mreceived\u001b[39m value must not be null nor undefined\n\nReceived has value: \u001b[31mundefined\u001b[39m\n\n\u001b[0m \u001b[90m 68 |\u001b[39m     expect(response\u001b[33m.\u001b[39mok())\u001b[33m.\u001b[39mtoBeTruthy()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 69 |\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 70 |\u001b[39m     expect(responseBody\u001b[33m.\u001b[39mbooking)\u001b[33m.\u001b[39mtoHaveProperty(\u001b[32m\"firstname\"\u001b[39m\u001b[33m,\u001b[39m bookingData\u001b[33m.\u001b[39mfirstname)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m                                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 71 |\u001b[39m     expect(responseBody\u001b[33m.\u001b[39mbooking)\u001b[33m.\u001b[39mtoHaveProperty(\u001b[32m\"lastname\"\u001b[39m\u001b[33m,\u001b[39m bookingData\u001b[33m.\u001b[39mlastname)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 72 |\u001b[39m     expect(responseBody\u001b[33m.\u001b[39mbooking)\u001b[33m.\u001b[39mtoHaveProperty(\u001b[32m\"totalprice\"\u001b[39m\u001b[33m,\u001b[39m bookingData\u001b[33m.\u001b[39mtotalprice)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 73 |\u001b[39m     expect(responseBody\u001b[33m.\u001b[39mbooking)\u001b[33m.\u001b[39mtoHaveProperty(\u001b[32m\"depositpaid\"\u001b[39m\u001b[33m,\u001b[39m bookingData\u001b[33m.\u001b[39mdepositpaid)\u001b[33m;\u001b[39m\u001b[0m\n\n\u001b[2m    at C:\\Users\\monika.konieczna\\Exploratory_Repos\\03_Playwright\\playwright-ts-api-testing\\apitest\\getBooking\\restful-booker.getBooking.test.ts:70:34\u001b[22m"
+                    }
+                  ],
+                  "stdout": [
+                    {
+                      "text": "705\n"
+                    }
+                  ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2023-10-18T07:14:25.685Z",
-                  "attachments": []
+                  "startTime": "2023-10-18T17:10:18.778Z",
+                  "attachments": [],
+                  "errorLocation": {
+                    "file": "C:\\Users\\monika.konieczna\\Exploratory_Repos\\03_Playwright\\playwright-ts-api-testing\\apitest\\getBooking\\restful-booker.getBooking.test.ts",
+                    "column": 34,
+                    "line": 70
+                  }
                 }
               ],
-              "status": "expected"
+              "status": "unexpected"
             }
           ],
-          "id": "c420f95386d17f6059ad-d4908e5c4d5ce84779e5",
+          "id": "c420f95386d17f6059ad-fef480aa557abcd894cc",
           "file": "apitest/getBooking/restful-booker.getBooking.test.ts",
-          "line": 9,
+          "line": 59,
           "column": 5
         },
         {
-          "title": "Get Booking By Firstname",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "",
-              "projectName": "",
-              "results": [
-                {
-                  "workerIndex": 2,
-                  "status": "passed",
-                  "duration": 502,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2023-10-18T07:14:26.175Z",
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
+          "title": "Get Booking By Checkout Date @get",
+          "ok": false,
+          "tags": [
+            "get"
           ],
-          "id": "c420f95386d17f6059ad-39cea09545a1bb03d6f6",
-          "file": "apitest/getBooking/restful-booker.getBooking.test.ts",
-          "line": 19,
-          "column": 5
-        },
-        {
-          "title": "Get Booking By Checkin Date",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "",
-              "projectName": "",
-              "results": [
-                {
-                  "workerIndex": 2,
-                  "status": "passed",
-                  "duration": 494,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2023-10-18T07:14:26.679Z",
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "c420f95386d17f6059ad-da353219ae1de3fd24e7",
-          "file": "apitest/getBooking/restful-booker.getBooking.test.ts",
-          "line": 29,
-          "column": 5
-        },
-        {
-          "title": "Get Booking By Checkout Date",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "",
-              "projectName": "",
-              "results": [
-                {
-                  "workerIndex": 2,
-                  "status": "passed",
-                  "duration": 488,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2023-10-18T07:14:27.175Z",
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "c420f95386d17f6059ad-871ba0d70aaa866a3824",
-          "file": "apitest/getBooking/restful-booker.getBooking.test.ts",
-          "line": 39,
-          "column": 5
-        },
-        {
-          "title": "Get Booking By ID",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "",
-              "projectName": "",
-              "results": [
-                {
-                  "workerIndex": 2,
-                  "status": "passed",
-                  "duration": 527,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2023-10-18T07:14:27.664Z",
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "c420f95386d17f6059ad-1dffb6cc0e20bf158327",
-          "file": "apitest/getBooking/restful-booker.getBooking.test.ts",
-          "line": 49,
-          "column": 5
-        }
-      ]
-    },
-    {
-      "title": "apitest\\updateBooking\\restful-booker.updateBooking.test.ts",
-      "file": "apitest/updateBooking/restful-booker.updateBooking.test.ts",
-      "column": 0,
-      "line": 0,
-      "specs": [
-        {
-          "title": "Update Booking",
-          "ok": true,
-          "tags": [],
           "tests": [
             {
               "timeout": 30000,
@@ -359,22 +267,112 @@
               "results": [
                 {
                   "workerIndex": 3,
-                  "status": "passed",
-                  "duration": 600,
-                  "errors": [],
-                  "stdout": [],
+                  "status": "failed",
+                  "duration": 521,
+                  "error": {
+                    "message": "\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoHaveProperty\u001b[2m(\u001b[22m\u001b[32mpath\u001b[39m\u001b[2m, \u001b[22m\u001b[32mvalue\u001b[39m\u001b[2m)\u001b[22m\n\n\u001b[1mMatcher error\u001b[22m: \u001b[31mreceived\u001b[39m value must not be null nor undefined\n\nReceived has value: \u001b[31mundefined\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoHaveProperty\u001b[2m(\u001b[22m\u001b[32mpath\u001b[39m\u001b[2m, \u001b[22m\u001b[32mvalue\u001b[39m\u001b[2m)\u001b[22m\n\n\u001b[1mMatcher error\u001b[22m: \u001b[31mreceived\u001b[39m value must not be null nor undefined\n\nReceived has value: \u001b[31mundefined\u001b[39m\n    at C:\\Users\\monika.konieczna\\Exploratory_Repos\\03_Playwright\\playwright-ts-api-testing\\apitest\\getBooking\\restful-booker.getBooking.test.ts:87:34",
+                    "location": {
+                      "file": "C:\\Users\\monika.konieczna\\Exploratory_Repos\\03_Playwright\\playwright-ts-api-testing\\apitest\\getBooking\\restful-booker.getBooking.test.ts",
+                      "column": 34,
+                      "line": 87
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 85 |\u001b[39m     expect(response\u001b[33m.\u001b[39mok())\u001b[33m.\u001b[39mtoBeTruthy()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 86 |\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 87 |\u001b[39m     expect(responseBody\u001b[33m.\u001b[39mbooking)\u001b[33m.\u001b[39mtoHaveProperty(\u001b[32m\"firstname\"\u001b[39m\u001b[33m,\u001b[39m bookingData\u001b[33m.\u001b[39mfirstname)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m                                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 88 |\u001b[39m     expect(responseBody\u001b[33m.\u001b[39mbooking)\u001b[33m.\u001b[39mtoHaveProperty(\u001b[32m\"lastname\"\u001b[39m\u001b[33m,\u001b[39m bookingData\u001b[33m.\u001b[39mlastname)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 89 |\u001b[39m     expect(responseBody\u001b[33m.\u001b[39mbooking)\u001b[33m.\u001b[39mtoHaveProperty(\u001b[32m\"totalprice\"\u001b[39m\u001b[33m,\u001b[39m bookingData\u001b[33m.\u001b[39mtotalprice)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 90 |\u001b[39m     expect(responseBody\u001b[33m.\u001b[39mbooking)\u001b[33m.\u001b[39mtoHaveProperty(\u001b[32m\"depositpaid\"\u001b[39m\u001b[33m,\u001b[39m bookingData\u001b[33m.\u001b[39mdepositpaid)\u001b[33m;\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\monika.konieczna\\Exploratory_Repos\\03_Playwright\\playwright-ts-api-testing\\apitest\\getBooking\\restful-booker.getBooking.test.ts",
+                        "column": 34,
+                        "line": 87
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoHaveProperty\u001b[2m(\u001b[22m\u001b[32mpath\u001b[39m\u001b[2m, \u001b[22m\u001b[32mvalue\u001b[39m\u001b[2m)\u001b[22m\n\n\u001b[1mMatcher error\u001b[22m: \u001b[31mreceived\u001b[39m value must not be null nor undefined\n\nReceived has value: \u001b[31mundefined\u001b[39m\n\n\u001b[0m \u001b[90m 85 |\u001b[39m     expect(response\u001b[33m.\u001b[39mok())\u001b[33m.\u001b[39mtoBeTruthy()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 86 |\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 87 |\u001b[39m     expect(responseBody\u001b[33m.\u001b[39mbooking)\u001b[33m.\u001b[39mtoHaveProperty(\u001b[32m\"firstname\"\u001b[39m\u001b[33m,\u001b[39m bookingData\u001b[33m.\u001b[39mfirstname)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m                                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 88 |\u001b[39m     expect(responseBody\u001b[33m.\u001b[39mbooking)\u001b[33m.\u001b[39mtoHaveProperty(\u001b[32m\"lastname\"\u001b[39m\u001b[33m,\u001b[39m bookingData\u001b[33m.\u001b[39mlastname)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 89 |\u001b[39m     expect(responseBody\u001b[33m.\u001b[39mbooking)\u001b[33m.\u001b[39mtoHaveProperty(\u001b[32m\"totalprice\"\u001b[39m\u001b[33m,\u001b[39m bookingData\u001b[33m.\u001b[39mtotalprice)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 90 |\u001b[39m     expect(responseBody\u001b[33m.\u001b[39mbooking)\u001b[33m.\u001b[39mtoHaveProperty(\u001b[32m\"depositpaid\"\u001b[39m\u001b[33m,\u001b[39m bookingData\u001b[33m.\u001b[39mdepositpaid)\u001b[33m;\u001b[39m\u001b[0m\n\n\u001b[2m    at C:\\Users\\monika.konieczna\\Exploratory_Repos\\03_Playwright\\playwright-ts-api-testing\\apitest\\getBooking\\restful-booker.getBooking.test.ts:87:34\u001b[22m"
+                    }
+                  ],
+                  "stdout": [
+                    {
+                      "text": "722\n"
+                    }
+                  ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2023-10-18T07:14:25.022Z",
-                  "attachments": []
+                  "startTime": "2023-10-18T17:10:20.275Z",
+                  "attachments": [],
+                  "errorLocation": {
+                    "file": "C:\\Users\\monika.konieczna\\Exploratory_Repos\\03_Playwright\\playwright-ts-api-testing\\apitest\\getBooking\\restful-booker.getBooking.test.ts",
+                    "column": 34,
+                    "line": 87
+                  }
                 }
               ],
-              "status": "expected"
+              "status": "unexpected"
             }
           ],
-          "id": "03dbe4d146e0f4491156-f057111da93d56bbf7da",
-          "file": "apitest/updateBooking/restful-booker.updateBooking.test.ts",
-          "line": 3,
+          "id": "c420f95386d17f6059ad-83cce67a38939315a21c",
+          "file": "apitest/getBooking/restful-booker.getBooking.test.ts",
+          "line": 76,
+          "column": 5
+        },
+        {
+          "title": "Get Booking By ID @get",
+          "ok": false,
+          "tags": [
+            "get"
+          ],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "status": "failed",
+                  "duration": 512,
+                  "error": {
+                    "message": "\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoHaveProperty\u001b[2m(\u001b[22m\u001b[32mpath\u001b[39m\u001b[2m, \u001b[22m\u001b[32mvalue\u001b[39m\u001b[2m)\u001b[22m\n\n\u001b[1mMatcher error\u001b[22m: \u001b[31mreceived\u001b[39m value must not be null nor undefined\n\nReceived has value: \u001b[31mundefined\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoHaveProperty\u001b[2m(\u001b[22m\u001b[32mpath\u001b[39m\u001b[2m, \u001b[22m\u001b[32mvalue\u001b[39m\u001b[2m)\u001b[22m\n\n\u001b[1mMatcher error\u001b[22m: \u001b[31mreceived\u001b[39m value must not be null nor undefined\n\nReceived has value: \u001b[31mundefined\u001b[39m\n    at C:\\Users\\monika.konieczna\\Exploratory_Repos\\03_Playwright\\playwright-ts-api-testing\\apitest\\getBooking\\restful-booker.getBooking.test.ts:100:34",
+                    "location": {
+                      "file": "C:\\Users\\monika.konieczna\\Exploratory_Repos\\03_Playwright\\playwright-ts-api-testing\\apitest\\getBooking\\restful-booker.getBooking.test.ts",
+                      "column": 34,
+                      "line": 100
+                    },
+                    "snippet": "\u001b[0m \u001b[90m  98 |\u001b[39m     expect(response\u001b[33m.\u001b[39mok())\u001b[33m.\u001b[39mtoBeTruthy()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m  99 |\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 100 |\u001b[39m     expect(responseBody\u001b[33m.\u001b[39mbooking)\u001b[33m.\u001b[39mtoHaveProperty(\u001b[32m\"firstname\"\u001b[39m\u001b[33m,\u001b[39m bookingData\u001b[33m.\u001b[39mfirstname)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m     |\u001b[39m                                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 101 |\u001b[39m     expect(responseBody\u001b[33m.\u001b[39mbooking)\u001b[33m.\u001b[39mtoHaveProperty(\u001b[32m\"lastname\"\u001b[39m\u001b[33m,\u001b[39m bookingData\u001b[33m.\u001b[39mlastname)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 102 |\u001b[39m     expect(responseBody\u001b[33m.\u001b[39mbooking)\u001b[33m.\u001b[39mtoHaveProperty(\u001b[32m\"totalprice\"\u001b[39m\u001b[33m,\u001b[39m bookingData\u001b[33m.\u001b[39mtotalprice)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 103 |\u001b[39m     expect(responseBody\u001b[33m.\u001b[39mbooking)\u001b[33m.\u001b[39mtoHaveProperty(\u001b[32m\"depositpaid\"\u001b[39m\u001b[33m,\u001b[39m bookingData\u001b[33m.\u001b[39mdepositpaid)\u001b[33m;\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\monika.konieczna\\Exploratory_Repos\\03_Playwright\\playwright-ts-api-testing\\apitest\\getBooking\\restful-booker.getBooking.test.ts",
+                        "column": 34,
+                        "line": 100
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoHaveProperty\u001b[2m(\u001b[22m\u001b[32mpath\u001b[39m\u001b[2m, \u001b[22m\u001b[32mvalue\u001b[39m\u001b[2m)\u001b[22m\n\n\u001b[1mMatcher error\u001b[22m: \u001b[31mreceived\u001b[39m value must not be null nor undefined\n\nReceived has value: \u001b[31mundefined\u001b[39m\n\n\u001b[0m \u001b[90m  98 |\u001b[39m     expect(response\u001b[33m.\u001b[39mok())\u001b[33m.\u001b[39mtoBeTruthy()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m  99 |\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 100 |\u001b[39m     expect(responseBody\u001b[33m.\u001b[39mbooking)\u001b[33m.\u001b[39mtoHaveProperty(\u001b[32m\"firstname\"\u001b[39m\u001b[33m,\u001b[39m bookingData\u001b[33m.\u001b[39mfirstname)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m     |\u001b[39m                                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 101 |\u001b[39m     expect(responseBody\u001b[33m.\u001b[39mbooking)\u001b[33m.\u001b[39mtoHaveProperty(\u001b[32m\"lastname\"\u001b[39m\u001b[33m,\u001b[39m bookingData\u001b[33m.\u001b[39mlastname)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 102 |\u001b[39m     expect(responseBody\u001b[33m.\u001b[39mbooking)\u001b[33m.\u001b[39mtoHaveProperty(\u001b[32m\"totalprice\"\u001b[39m\u001b[33m,\u001b[39m bookingData\u001b[33m.\u001b[39mtotalprice)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 103 |\u001b[39m     expect(responseBody\u001b[33m.\u001b[39mbooking)\u001b[33m.\u001b[39mtoHaveProperty(\u001b[32m\"depositpaid\"\u001b[39m\u001b[33m,\u001b[39m bookingData\u001b[33m.\u001b[39mdepositpaid)\u001b[33m;\u001b[39m\u001b[0m\n\n\u001b[2m    at C:\\Users\\monika.konieczna\\Exploratory_Repos\\03_Playwright\\playwright-ts-api-testing\\apitest\\getBooking\\restful-booker.getBooking.test.ts:100:34\u001b[22m"
+                    }
+                  ],
+                  "stdout": [
+                    {
+                      "text": "732\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2023-10-18T17:10:21.779Z",
+                  "attachments": [],
+                  "errorLocation": {
+                    "file": "C:\\Users\\monika.konieczna\\Exploratory_Repos\\03_Playwright\\playwright-ts-api-testing\\apitest\\getBooking\\restful-booker.getBooking.test.ts",
+                    "column": 34,
+                    "line": 100
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "c420f95386d17f6059ad-66c9f4754a627f098236",
+          "file": "apitest/getBooking/restful-booker.getBooking.test.ts",
+          "line": 93,
           "column": 5
         }
       ]
@@ -382,7 +380,7 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2023-10-18T07:14:23.779Z",
-    "duration": 4432.236
+    "startTime": "2023-10-18T17:10:14.638Z",
+    "duration": 8243.277
   }
 }
