@@ -1,7 +1,7 @@
 import { expect, test } from "playwright/test";
 import bookingData = require("../../test-data/post-booking.json");
 
-test.only("Create Booking", async ({ request, baseURL }) => {
+test("Create Booking", async ({ request, baseURL }) => {
   const response = await request.post(`${baseURL}/booking`, {
     data: bookingData,
   });
