@@ -9,7 +9,7 @@ test.beforeEach("Create Booking", async ({ request, baseURL }) => {
   expect(response.ok()).toBeTruthy();
 
   const responseBody = await response.json();
-  process.env.bookingID = responseBody.bookingid;
+  process.env.BOOKING_ID_3 = responseBody.bookingid;
 });
 
 test("Get Booking By Lastname @get", async ({ request, baseURL }) => {
@@ -25,11 +25,11 @@ test("Get Booking By Lastname @get", async ({ request, baseURL }) => {
     let data = JSON.parse(b.toString());
     return data.filter(
       (d: { bookingid: string | undefined }) =>
-        d.bookingid == process.env.bookingID
+        d.bookingid == process.env.BOOKING_ID_3
     );
   });
 
-  let ID = process.env.bookingID;
+  let ID = process.env.BOOKING_ID_3;
   const a = ID;
 
   expect(responseAsString[0] !== undefined).toBe(true);
@@ -52,11 +52,11 @@ test("Get Booking By Firstname @get", async ({ request, baseURL }) => {
     let data = JSON.parse(b.toString());
     return data.filter(
       (d: { bookingid: string | undefined }) =>
-        d.bookingid == process.env.bookingID
+        d.bookingid == process.env.BOOKING_ID_3
     );
   });
 
-  let ID = process.env.bookingID;
+  let ID = process.env.BOOKING_ID_3;
   const a = ID;
 
   expect(responseAsString[0] !== undefined).toBe(true);
@@ -79,11 +79,11 @@ test("Get Booking By Checkin Date @get", async ({ request, baseURL }) => {
     let data = JSON.parse(b.toString());
     return data.filter(
       (d: { bookingid: string | undefined }) =>
-        d.bookingid == process.env.bookingID
+        d.bookingid == process.env.BOOKING_ID_3
     );
   });
 
-  let ID = process.env.bookingID;
+  let ID = process.env.BOOKING_ID_3;
   const a = ID;
 
   expect(responseAsString[0] !== undefined).toBe(true);
@@ -106,11 +106,11 @@ test("Get Booking By Checkout Date @get", async ({ request, baseURL }) => {
     let data = JSON.parse(b.toString());
     return data.filter(
       (d: { bookingid: string | undefined }) =>
-        d.bookingid == process.env.bookingID
+        d.bookingid == process.env.BOOKING_ID_3
     );
   });
 
-  let ID = process.env.bookingID;
+  let ID = process.env.BOOKING_ID_3;
   const a = ID;
 
   expect(responseAsString[0] !== undefined).toBe(true);
@@ -121,7 +121,7 @@ test("Get Booking By Checkout Date @get", async ({ request, baseURL }) => {
 });
 
 test("Get Booking By ID @get", async ({ request, baseURL }) => {
-  let ID = process.env.bookingID;
+  let ID = process.env.BOOKING_ID_3;
   const url = `${baseURL}/booking/`;
   const response = await request.get(url + ID, {});
   const responseBody = await response.json();

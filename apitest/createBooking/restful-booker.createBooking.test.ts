@@ -7,7 +7,7 @@ test("Create Booking", async ({ request, baseURL }) => {
   });
 
   const responseBody = await response.json();
-  process.env.bookingID = responseBody.bookingid;
+  process.env.BOOKING_ID_1 = responseBody.bookingid;
 
   expect(response.status()).toBe(200);
   expect(response.ok()).toBeTruthy();

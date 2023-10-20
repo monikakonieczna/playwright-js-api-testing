@@ -9,7 +9,7 @@ test.beforeEach("Create Booking", async ({ request, baseURL }) => {
   expect(response.ok()).toBeTruthy();
 
   const responseBody = await response.json();
-  process.env.bookingID = responseBody.bookingid;
+  process.env.BOOKING_ID_4 = responseBody.bookingid;
 });
 
 test("Get BookingIds", async ({ request, baseURL }) => {
@@ -21,11 +21,11 @@ test("Get BookingIds", async ({ request, baseURL }) => {
     let data = JSON.parse(b.toString());
     return data.filter(
       (d: { bookingid: string | undefined }) =>
-        d.bookingid == process.env.bookingID
+        d.bookingid == process.env.BOOKING_ID_4
     );
   });
 
-  let ID = process.env.bookingID;
+  let ID = process.env.BOOKING_ID_4;
   const a = ID;
   if (a) {
     expect(responseAsString[0]).toHaveProperty("bookingid", +a);

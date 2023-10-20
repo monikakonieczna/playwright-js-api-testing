@@ -1,21 +1,44 @@
 import { expect, test } from "playwright/test";
+import bookingData = require("../../test-data/update-booking.json");
 
-test("Update Booking", async ({ request, baseURL }) => {
-  const _response = await request.patch(`${baseURL}/booking/1`, {
+test.beforeEach("Create Booking", async ({ request, baseURL }) => {
+  const response = await request.post(`${baseURL}/booking`, {
+    data: bookingData,
+  });
+  expect(response.status()).toBe(200);
+  expect(response.ok()).toBeTruthy();
+
+  const responseBody = await response.json();
+  process.env.BOOKING_ID_5 = responseBody.bookingid;
+});
+
+test("Update Booking Partially - Udpate firstname and lastname @patch", async ({ request, baseURL }) => {
+  let ID = process.env.BOOKING_ID_5;
+  const url = `${baseURL}/booking/`;
+  const response2 = await request.get(url + ID, {});
+  expect(response2.status()).toBe(200);
+
+  const response = await request.put(url + ID, {
     headers: {
       Cookie: `token=${process.env.TOKEN}`,
-      Accept: "application/json"
+      Accept: "application/json",
     },
     data: {
-      firstname: "Sally",
+      firstname: "James",
       lastname: "Brown",
-      totalprice: 111,
-      depositpaid: true,
-      bookingdates: {
-        checkin: "2013-02-23",
-        checkout: "2014-10-23",
-      },
-      additionalneeds: "Breakfast",
     },
   });
+  expect(response.status()).toBe(200);
+  expect(response.ok()).toBeTruthy();
+  const responseBody = await response.json();
+
+  console.log(responseBody);
+  expect(responseBody).toHaveProperty("firstname", "James");
+  expect(responseBody).toHaveProperty("lastname", "Brown");
+  expect(responseBody).toHaveProperty("totalprice", bookingData.totalprice);
+  expect(responseBody).toHaveProperty("depositpaid", bookingData.depositpaid);
+  expect(responseBody).toHaveProperty(
+    "additionalneeds",
+    bookingData.additionalneeds
+  );
 });

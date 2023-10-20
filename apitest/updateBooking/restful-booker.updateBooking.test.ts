@@ -9,11 +9,11 @@ test.beforeEach("Create Booking", async ({ request, baseURL }) => {
   expect(response.ok()).toBeTruthy();
 
   const responseBody = await response.json();
-  process.env.bookingID = responseBody.bookingid;
+  process.env.BOOKING_ID_5 = responseBody.bookingid;
 });
 
 test("Update Booking @put", async ({ request, baseURL }) => {
-  let ID = process.env.bookingID;
+  let ID = process.env.BOOKING_ID_5;
   const url = `${baseURL}/booking/`;
   const response2 = await request.get(url + ID, {});
   expect(response2.status()).toBe(200);
