@@ -4,8 +4,7 @@ test("Update Booking", async ({ request, baseURL }) => {
   const _response = await request.patch(`${baseURL}/booking/1`, {
     headers: {
       Cookie: `token=${process.env.TOKEN}`,
-      "Content-Type": "application/json",
-      Accept: "application/json",
+      Accept: "application/json"
     },
     data: {
       firstname: "Sally",

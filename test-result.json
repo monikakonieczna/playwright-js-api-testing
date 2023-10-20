@@ -60,16 +60,16 @@
   },
   "suites": [
     {
-      "title": "apitest\\deleteBooking\\restful-booker.deleteBooking.test.ts",
-      "file": "apitest/deleteBooking/restful-booker.deleteBooking.test.ts",
+      "title": "apitest\\updateBooking\\restful-booker.updateBooking.test.ts",
+      "file": "apitest/updateBooking/restful-booker.updateBooking.test.ts",
       "column": 0,
       "line": 0,
       "specs": [
         {
-          "title": "Delete Booking @delete",
+          "title": "Update Booking @put",
           "ok": true,
           "tags": [
-            "delete"
+            "put"
           ],
           "tests": [
             {
@@ -82,20 +82,24 @@
                 {
                   "workerIndex": 0,
                   "status": "passed",
-                  "duration": 1981,
+                  "duration": 1881,
                   "errors": [],
-                  "stdout": [],
+                  "stdout": [
+                    {
+                      "text": "{\n  firstname: \u001b[32m'Krystian'\u001b[39m,\n  lastname: \u001b[32m'Wafel'\u001b[39m,\n  totalprice: \u001b[33m22\u001b[39m,\n  depositpaid: \u001b[33mtrue\u001b[39m,\n  bookingdates: { checkin: \u001b[32m'2023-10-18'\u001b[39m, checkout: \u001b[32m'2023-10-25'\u001b[39m },\n  additionalneeds: \u001b[32m'Towels'\u001b[39m\n}\n"
+                    }
+                  ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2023-10-20T04:00:05.672Z",
+                  "startTime": "2023-10-20T04:35:32.273Z",
                   "attachments": []
                 }
               ],
               "status": "expected"
             }
           ],
-          "id": "743742a913ab42b99cec-5c61a76e6134fd750ad4",
-          "file": "apitest/deleteBooking/restful-booker.deleteBooking.test.ts",
+          "id": "03dbe4d146e0f4491156-a45e15b51f5150130052",
+          "file": "apitest/updateBooking/restful-booker.updateBooking.test.ts",
           "line": 15,
           "column": 6
         }
@@ -104,7 +108,7 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2023-10-20T04:00:04.460Z",
-    "duration": 3212.197
+    "startTime": "2023-10-20T04:35:31.033Z",
+    "duration": 3140.615
   }
 }

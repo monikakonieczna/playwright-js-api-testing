@@ -1,24 +1,50 @@
 import { expect, test } from "playwright/test";
+import bookingData = require("../../test-data/update-booking.json");
 
-test("Update Booking", async ({ request, baseURL }) => {
-  const _response = await request.put(`${baseURL}/booking/1`, {
+test.beforeEach("Create Booking", async ({ request, baseURL }) => {
+  const response = await request.post(`${baseURL}/booking`, {
+    data: bookingData,
+  });
+  expect(response.status()).toBe(200);
+  expect(response.ok()).toBeTruthy();
+
+  const responseBody = await response.json();
+  process.env.bookingID = responseBody.bookingid;
+});
+
+test("Update Booking @put", async ({ request, baseURL }) => {
+  let ID = process.env.bookingID;
+  const url = `${baseURL}/booking/`;
+  const response2 = await request.get(url + ID, {});
+  expect(response2.status()).toBe(200);
+
+  const response = await request.put(url + ID, {
     headers: {
       Cookie: `token=${process.env.TOKEN}`,
-      "Content-Type": "application/json",
-      Accept: "application/json",
+      Accept: "*/*",
     },
-    data: {
-      firstname: "Sally",
-      lastname: "Brown",
-      totalprice: 111,
-      depositpaid: true,
-      bookingdates: {
-        checkin: "2013-02-23",
-        checkout: "2014-10-23",
-      },
-      additionalneeds: "Breakfast",
-    },
+    data: bookingData,
   });
-  expect(_response.status()).toBe(200);
-  expect(_response.ok()).toBeTruthy();
+  expect(response.status()).toBe(200);
+  expect(response.ok()).toBeTruthy();
+  const responseBody = await response.json();
+
+  console.log(responseBody);
+  expect(responseBody).toHaveProperty(
+    "firstname",
+    bookingData.firstname
+  );
+  expect(responseBody).toHaveProperty("lastname", bookingData.lastname);
+  expect(responseBody).toHaveProperty(
+    "totalprice",
+    bookingData.totalprice
+  );
+  expect(responseBody).toHaveProperty(
+    "depositpaid",
+    bookingData.depositpaid
+  );
+  expect(responseBody).toHaveProperty(
+    "additionalneeds",
+    bookingData.additionalneeds
+  );
 });

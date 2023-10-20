@@ -12,7 +12,7 @@ test.beforeEach("Create Booking", async ({ request, baseURL }) => {
   process.env.bookingID = responseBody.bookingid;
 });
 
-test.only("Delete Booking @delete", async ({ request, baseURL }) => {
+test("Delete Booking @delete", async ({ request, baseURL }) => {
   let ID = process.env.bookingID;
   const url = `${baseURL}/booking/`;
   const response2 = await request.get(url + ID, {});
@@ -21,7 +21,6 @@ test.only("Delete Booking @delete", async ({ request, baseURL }) => {
   const response = await request.delete(url + ID, {
     headers: {
       Cookie: `token=${process.env.TOKEN}`,
-      "Content-Type": "application/json",
       Accept: "application/json",
     },
   });
